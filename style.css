@@ -10,3 +10,14 @@
 .card{
     width: 100%;
 }
+
+.password{
+    border-style: dashed;
+    border-width: 2px;
+    border-color: lightgray;
+    border-radius: 10px;
+    height: 150px;
+    font-size: 20px;
+    padding-top: 10px;
+    color: gray;
+}
