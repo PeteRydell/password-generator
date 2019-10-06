@@ -27,24 +27,52 @@ function genPassword(){
         var randomPassword = characterSet[Math.floor(Math.random() * charPrompt.length)];
         }
 
-    //Add special characters to the set
-    if (specChar == true){
-        charSet = charSet + special
-    };
-    // Adds numeric characters to the set
-    if (num == true){
-        charSet = charSet + numeric
-    };
-    // Adds lowercase characters to the set
-    if (lowChar == true){
-        charSet = charSet + lowCaseCharacter
-    };
-    // Adds uppercase characters to the set
-    if (upChar == true){
-        charSet = charSet + upperCaseCharacter
-    };
-    
-    console.log (randomPassword)
+        //Add characters to set
+        if ((specChar == true) && (num == true) && (lowChar == true) && (upChar == true)){
+            charSet = charSet + special + numeric + lowCaseCharacter + upperCaseCharacter
+        }
+            //Special Character set
+            else if ((specChar == true) && (num == true) && (lowChar == true) && (upChar == false)){
+            charSet = charSet + special + numeric + lowCaseCharacter
+        ;}
+            else if ((specChar == true) && (num == true) && (lowChar == false) && (upChar == true)){
+            charSet = charSet + special + numeric + upperCaseCharacter
+        ;}
+            else if ((specChar == true) && (num == false) && (lowChar == true) && (upChar == true)){
+            charSet = charSet + special + upperCaseCharacter + lowCaseCharacter
+        ;}
+            else if ((specChar == true) && (num == true) && (lowChar == false) && (upChar == false)){
+            charSet = charSet + special + numeric
+        ;}
+            else if ((specChar == true) && (num == false) && (lowChar == true) && (upChar == false)){
+            charSet = charSet + special + lowCaseCharacter
+        ;}
+            else if ((specChar == true) && (num == false) && (lowChar == false) && (upChar == true)){
+            charSet = charSet + special + upperCaseCharacter
+        ;}
+            else if ((specChar == true) && (num == false) && (lowChar == false) && (upChar == false)){
+            charSet = charSet + special
+        ;}
+            //Upper Case Character set
+            else if ((specChar == false) && (num == true) && (lowChar == true) && (upChar == true)){
+            charSet = charset + numeric + lowCaseCharacter + upperCaseCharacter
+        ;}
+            else if ((specChar == false) && (num == false) && (lowChar == true) && (upChar == true)){
+            charSet = charset + lowCaseCharacter + upperCaseCharacter
+        ;}
+            else if ((specChar == false) && (num == false) && (lowChar == false) && (upChar == true)){
+            charSet = charset + upperCaseCharacter
+        ;}
+            // Lower Case character set
+            else if ((specChar == false) && (num == false) && (lowChar == true) && (upChar == false)){
+            charSet = charset + lowCaseCharacter
+        ;}
+            // Numeric Case character set
+            else if ((specChar == false) && (num == true) && (lowChar == false) && (upChar == false)){
+                charSet = charset + numeric
+        ;}
+ 
+        console.log (randomPassword)
 }
 
 function copy(){
