@@ -24,7 +24,7 @@ The user is finally presented with a confirmation window to determine whether he
 
 <img width="445" alt="Screen Shot 2019-10-05 at 9 22 06 PM" src="https://user-images.githubusercontent.com/31483933/66264538-f9f51580-e7bb-11e9-8293-8da1c3041b12.png">
 
-These determinations depending on true or false are then run through a loop to provide a rnadom collection of characters and displayed in the text area on the web page:
+These determinations depending on true or false are then run through a loop to provide a random collection of characters and displayed in the text area on the web page:
 
 ![Picture1](https://user-images.githubusercontent.com/31483933/66264534-f95c7f00-e7bb-11e9-850c-ccd0cc8f6b19.png)
 
