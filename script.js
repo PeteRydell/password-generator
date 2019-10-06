@@ -7,7 +7,7 @@ var lowChar = confirm ("Would you like to include lower case characters?");
 var upChar = confirm ("Would yuou like to include upper case characters?");
 
 var numeric = "0123456789";
-var symbol = "!@#$%^&*()_+{}:<>?/|[];,./`~";
+var special = "!@#$%^&*()_+{}:<>?|[];,./`~";
 var lowCaseCharacter = "abcdefghijklmnopqrstuvwxyz";
 var upperCaseCharacter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -18,31 +18,21 @@ console.log (lowChar);
 console.log (upChar);
 console.log (genPass);
 
-document.getElementById("genPass").addEventListener("click", function() {
-    var characters = char;
-});
-
-function password(l, characters){
-    var pwd = '';
-    for (var i = 0; i<l; i++){
-        pwd += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return pwd;
-}
-function generatePassword() {
-    var passwordLength = charPrompt.value;
+function genPassword(){
+    var passwordLength = charPrompt;
     var charSet = "";
-    var retVal = "";
+    var randomPassword = "";
 
-    for (var i = 0; i < parseInt(passwordLength); ++i) {
-        genPass += characterSet.charAt(Math.floor(Math.random() * characterSet.length));
-        
-    // Adds special characters to the set
+    for (var i = 0; i < parseInt(passwordLength); i++) {
+        var randomPassword = characterSet[Math.floor(Math.random() * charPrompt.length)];
+        }
+
+    //Add special characters to the set
     if (specChar == true){
-        charSet = charSet + symbol
+        charSet = charSet + special
     };
     // Adds numeric characters to the set
-    if (specChar == true){
+    if (num == true){
         charSet = charSet + numeric
     };
     // Adds lowercase characters to the set
@@ -54,14 +44,11 @@ function generatePassword() {
         charSet = charSet + upperCaseCharacter
     };
     
-    }
-    return retVal;
+    console.log (randomPassword)
 }
-    console.log (retVal);
 
 function copy(){
-    var cPass = document.getElementById("generatePassword");
+    var copyClipboard = document.getElementById("genPass");
     copyText.select();
-    copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
 }
