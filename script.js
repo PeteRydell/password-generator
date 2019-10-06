@@ -71,6 +71,7 @@ function genPassword(){
             else if ((specChar == false) && (num == true) && (lowChar == false) && (upChar == false)){
                 charSet = charset + numeric
         ;}
+            return
  
         console.log (randomPassword)
 }
